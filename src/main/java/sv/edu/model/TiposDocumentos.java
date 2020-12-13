@@ -7,7 +7,7 @@ public class TiposDocumentos {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int idtipodocu;
+	private Integer idtipodocu;
 	@Column
 	private String documento;
 	

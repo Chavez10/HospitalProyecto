@@ -10,7 +10,7 @@ import javax.persistence.Id;
 public class Nacionalidades {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int idnacionalidad;
+	private Integer idnacionalidad;
 	@Column
 	private String nacionalidad;
 	
