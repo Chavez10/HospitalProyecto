@@ -1,8 +1,17 @@
 package sv.edu.model;
 
-public class TiposDocumentosModel {
+import javax.persistence.*;
+
+@Entity
+public class TiposDocumentos {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int idtipodocu;
+	@Column
 	private String documento;
+	
+	
 	public int getIdtipodocu() {
 		return idtipodocu;
 	}
