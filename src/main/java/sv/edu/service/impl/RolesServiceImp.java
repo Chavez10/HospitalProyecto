@@ -2,7 +2,6 @@ package sv.edu.service.impl;
 
 import sv.edu.services.api.RolesServiceAPI;
 
-import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.CrudRepository;
