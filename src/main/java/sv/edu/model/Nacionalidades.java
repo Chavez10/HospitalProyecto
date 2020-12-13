@@ -10,16 +10,16 @@ import javax.persistence.Id;
 public class Nacionalidades {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer idnacionalidad;
+	private Integer id_nacionalidad;
 	@Column
 	private String nacionalidad;
 	
 	
-	public int getIdnacionalidad() {
-		return idnacionalidad;
+	public Integer getId_nacionalidad() {
+		return id_nacionalidad;
 	}
-	public void setIdnacionalidad(int idnacionalidad) {
-		this.idnacionalidad = idnacionalidad;
+	public void setId_nacionalidad(Integer id_nacionalidad) {
+		this.id_nacionalidad = id_nacionalidad;
 	}
 	public String getNacionalidad() {
 		return nacionalidad;

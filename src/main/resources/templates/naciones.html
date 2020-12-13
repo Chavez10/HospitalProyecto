@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Administracion de Nacionalidades</title>
+<!-- Bootstrap CSS -->
+<link href="../static/css/bootstrap.css" rel="stylesheet"
+	th:href="@{/css/bootstrap.css}">
+</head>
+<body>
+	<div class="container">
+		<hr>
+		<div>
+			<a href="/saveNacion/0" class="btn btn-primary">Agregar Nacion</a>
+		</div>
+
+		<br>
+		<h3 th:if="${list.isEmpty()}">No hay registros todavía</h3>
+		<div th:if="${!list.isEmpty()}">
+			<h2>Nacionalidades</h2>
+			<hr />
+			<table class="table">
+				<thead>
+					<tr>
+						<th>Nacionalidades Registradas</th>
+						<th></th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="nac : ${list}">
+						<td th:text="${nac.nacionalidad}">
+						<td><a th:href="@{/saveNacion/{id}(id=${nac.id_nacionalidad})}"
+							class="btn btn-info">Actualizar</a></td>
+						<td><a th:href="@{/deleteNacion/{id}(id=${nac.id_nacionalidad})}"
+							class="btn btn-warning">Eliminar</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</body>
+</html>

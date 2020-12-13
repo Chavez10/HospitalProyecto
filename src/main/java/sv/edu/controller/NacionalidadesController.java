@@ -39,7 +39,7 @@ public class NacionalidadesController {
 		return "redirect:/naciones";
 	}
 	
-	@GetMapping("/delete/{id}")
+	@GetMapping("/deleteNacion/{id}")
 	public String delete(@PathVariable Integer id, Model model) {
 		nacionAPI.delete(id);
 		return "redirect:/naciones";
