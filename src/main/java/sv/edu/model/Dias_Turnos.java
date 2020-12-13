@@ -11,7 +11,7 @@ public class Dias_Turnos {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id_dia;
+	private Integer id_dia;
 	@Column
 	private String dia;
 

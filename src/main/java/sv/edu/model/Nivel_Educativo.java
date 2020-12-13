@@ -11,7 +11,7 @@ public class Nivel_Educativo {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id_nivel;
+	private Integer id_nivel;
 	@Column
 	private String nivel;
 

@@ -11,7 +11,7 @@ public class Especialidades {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id_especialidad;
+	private Integer id_especialidad;
 	@Column
 	private String especialidad;
 

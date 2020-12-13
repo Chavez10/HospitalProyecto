@@ -7,7 +7,7 @@ public class Perfiles {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY )
-	private int idperfil;
+	private Integer idperfil;
 	@Column
 	private String perfil;
 	

@@ -11,7 +11,7 @@ public class Roles {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int idrol;
+	private Integer idrol;
 	@Column
 	private String rol;
 	
