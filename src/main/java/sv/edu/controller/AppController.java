@@ -15,6 +15,10 @@ public class AppController {
 	public String menu() {
 		return "menu";
 	}
+	@GetMapping({ "/menu1" })
+	public String menu1() {
+		return "menu1";
+	}
 
 	@GetMapping({ "/admin" })
 	public String admin() {

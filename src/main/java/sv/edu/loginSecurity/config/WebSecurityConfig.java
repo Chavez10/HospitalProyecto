@@ -11,7 +11,6 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import sv.edu.loginSecurity.services.*;;
-
 @Configuration
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
@@ -33,7 +32,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	            .formLogin()
 	                .loginPage("/login")
 	                .permitAll()
-	                .defaultSuccessUrl("/menu")
+	                .defaultSuccessUrl("/user")
 	                .failureUrl("/login?error=true")
 	                .usernameParameter("username")
 	                .passwordParameter("password")
