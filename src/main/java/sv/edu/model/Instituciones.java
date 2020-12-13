@@ -10,7 +10,7 @@ import javax.persistence.Id;
 public class Instituciones {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id_institucion;
+	private Integer id_institucion;
 @Column
 	public int getId_institucion() {
 		return id_institucion;
