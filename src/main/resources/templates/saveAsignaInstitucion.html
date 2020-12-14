@@ -13,38 +13,52 @@
 		<hr>
 		<h2>Nueva Persona</h2>
 		<hr />
-		<form action="#" th:action="@{/saveAsignaInstitucion}" th:object="${asigInstituto}"
-			method="post">
+		<form action="#" th:action="@{/saveAsignaInstitucion}"
+			th:object="${asigInstituto}" method="post">
 			<input type="hidden" th:field="*{id_asig_institucion}"
 				name="id_asig_institucion" id="id_asig_institucion" />
 			<div class="form-group">
+				<!-- 
+				1 -> th:field se refiere a los atributos que vienen del modelo Asig_Institucion
+				2 -> th:each es el objeto que viene desde el controlador AsigInstitucion 
+				3 -> th:value y th:text son los atributos del modelo Registros
+			 -->
 				<label for="id_registro">Usuario</label> 
-				<select th:field="*{id_registro}" class="form-control" id="id_registro">
+				<select
+					th:field="*{id_registro}" class="form-control" id="id_registro">
 					<option th:each="registro : ${reg}"
-						th:value="${registro.id_registro}"
-						th:text="${registro.nombre}"
-					 />	
+						th:value="${registro.id_registro}" th:text="${registro.nombre}" />
 				</select>
 			</div>
 			<div class="form-group">
-				<label for="id_institucion">Institucion</label> 
-				<select th:field="*{id_institucion}" class="form-control" id="id_institucion">
+				<label for="id_institucion">Institucion</label>
+				<!-- 
+					1 -> th:field se refiere a los atributos que vienen del modelo Asig_Institucion
+					2 -> th:each es el objeto que viene desde el controlador AsigInstitucion 
+					3 -> th:value y th:text son los atributos del modelo Instituciones
+			 	-->
+				<select th:field="*{id_institucion}" class="form-control"
+					id="id_institucion">
 					<option th:each="institucion : ${insti}"
 						th:value="${institucion.id_institucion}"
-						th:text="${institucion.institucion}"
-					 />	
+						th:text="${institucion.institucion}" />
 				</select>
 			</div>
 			<div class="form-group">
 				<label for="id_nivel">Nivel Educativo</label> 
-				<select th:field="*{id_nivel}" class="form-control" id="id_nivel">
-					<option th:each="edu : ${nivel}"
-						th:value="${edu.id_nivel}"
-						th:text="${edu.nivel}"
-					 />	
+				<!-- 
+					1 -> th:field se refiere a los atributos que vienen del modelo Asig_Institucion
+					2 -> th:each es el objeto que viene desde el controlador AsigInstitucion 
+					3 -> th:value y th:text son los atributos del modelo Nivel_Educativo
+			 	-->
+				<select
+					th:field="*{id_nivel}" class="form-control" id="id_nivel">
+					<option th:each="edu : ${nivel}" th:value="${edu.id_nivel}"
+						th:text="${edu.nivel}" />
 				</select>
 			</div>
-			<button type="submit" class="btn btn-success">Asignar Institucion</button>
+			<button type="submit" class="btn btn-success">Asignar
+				Institucion</button>
 		</form>
 	</div>
 </body>

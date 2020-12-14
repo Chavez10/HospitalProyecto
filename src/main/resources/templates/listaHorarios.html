@@ -22,17 +22,19 @@
 			<table class="table">
 				<thead>
 					<tr>
-						<th>Horarios Registradas</th>
+						<th>Codigo de horarios</th>
+						<th>Horarios Registrados</th>
 						<th></th>
 						<th></th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr th:each="hor : ${list}">
+						<td th:text="${hor.id_horario}">
 						<td th:text="${hor.horario}">
-						<td><a th:href="@{/saveHorarios/{id}(id=${hor.saveHorarios})}"
+						<td><a th:href="@{/saveHorarios/{id}(id=${hor.id_horario})}"
 							class="btn btn-info">Actualizar</a></td>
-						<td><a th:href="@{/deleteHorarios/{id}(id=${hor.saveHorarios})}"
+						<td><a th:href="@{/deleteHorarios/{id}(id=${hor.id_horario})}"
 							class="btn btn-warning">Eliminar</a></td>
 					</tr>
 				</tbody>

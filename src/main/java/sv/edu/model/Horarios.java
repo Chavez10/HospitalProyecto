@@ -6,11 +6,12 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import org.hibernate.annotations.GenericGenerator;
+
 @Entity
 public class Horarios {
 
 	@Id
-	@GeneratedValue(strategy =GenerationType.AUTO )
 	private String id_horario;
 	@Column
 	private String horario;
