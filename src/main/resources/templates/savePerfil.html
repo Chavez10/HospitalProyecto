@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Administracion de Perfiles</title>
+<!-- Bootstrap CSS -->
+<link href="../static/css/bootstrap.css" rel="stylesheet"
+	th:href="@{/css/bootstrap.css}">
+</head>
+<body>
+	<div class="container">
+		<br>
+		<hr>
+		<h2>Nueva Perfil</h2>
+		<hr />
+		<form action="#" th:action="@{/savePerfil}" th:object="${perfil}"
+			method="post">
+			<input type="hidden" th:field="*{id_perfil}" name="id_perfil" id="id_perfil" />
+			<div class="form-group">
+				<label for="nombre">Perfil</label> <input type="text" id="perfil"
+					name="perfil" th:field="*{perfil}" class="form-control" />
+			</div>
+			<button type="submit" class="btn btn-success">Guardar Perfil</button>
+		</form>
+	</div>
+</body>
+</html>

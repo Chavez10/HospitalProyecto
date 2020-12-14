@@ -34,7 +34,7 @@ public class PerfilesController {
 		return "savePerfil";
 	}
 	
-	@PostMapping("/savaPerfil")
+	@PostMapping("/savePerfil")
 	public String save(Perfiles per, Model m) {
 		perfilAPI.save(per);
 		return "redirect:/perfiles";

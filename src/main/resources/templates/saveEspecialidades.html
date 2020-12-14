@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Administracion de Especialidades</title>
+<!-- Bootstrap CSS -->
+<link href="../static/css/bootstrap.css" rel="stylesheet"
+	th:href="@{/css/bootstrap.css}">
+</head>
+<body>
+	<div class="container">
+		<br>
+		<hr>
+		<h2>Nueva Especialidad</h2>
+		<hr />
+		<form action="#" th:action="@{/saveEspecialidades}" th:object="${especialidades}"
+			method="post">
+			<input type="hidden" th:field="*{id_especialidad}" name="id_especialidad" id="id_especialidad" />
+			<div class="form-group">
+				<label for="nombre">Especialidad</label> <input type="text" id="especialidad"
+					name="especialidad" th:field="*{especialidad}" class="form-control" />
+			</div>
+			<button type="submit" class="btn btn-success">Guardar Especialidad</button>
+		</form>
+	</div>
+</body>
+</html>

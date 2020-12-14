@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Administracion de Perfiles</title>
+<!-- Bootstrap CSS -->
+<link href="../static/css/bootstrap.css" rel="stylesheet"
+	th:href="@{/css/bootstrap.css}">
+</head>
+<body>
+	<div class="container">
+		<hr>
+		<div>
+			<a href="/savePerfil/0" class="btn btn-primary">Agregar Perfil</a>
+		</div>
+
+		<br>
+		<h3 th:if="${list.isEmpty()}">No hay registros todavía</h3>
+		<div th:if="${!list.isEmpty()}">
+			<h2>Perfil</h2>
+			<hr />
+			<table class="table">
+				<thead>
+					<tr>
+						<th>Perfiles Registrados</th>
+						<th></th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="per : ${list}">
+						<td th:text="${per.perfil}">
+						<td><a th:href="@{/savePerfil/{id}(id=${per.id_perfil})}"
+							class="btn btn-info">Actualizar</a></td>
+						<td><a th:href="@{/deletePerfil/{id}(id=${per.id_perfil})}"
+							class="btn btn-warning">Eliminar</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</body>
+</html>
