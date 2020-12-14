@@ -28,6 +28,8 @@ public class EspecialidadesController {
 	public String showSave(@PathVariable("id") Integer id, Model model) {
 		if (id != null && id != 0) {
 			model.addAttribute("especialidades", especialidadServiceAPI.get(id));
+		}else {
+			model.addAttribute("especialidades", new Especialidades());
 		}
 		return "saveEspecialidades";
 

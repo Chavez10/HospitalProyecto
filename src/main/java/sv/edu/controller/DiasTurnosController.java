@@ -28,6 +28,8 @@ public class DiasTurnosController {
 	public String showSave(@PathVariable("id") Integer id, Model model) {
 		if (id != null && id != 0) {
 			model.addAttribute("DiasTurnos", diasTurnosServiceAPI.get(id));
+		}else {
+			model.addAttribute("DiasTurnos", new Dias_Turnos());
 		}
 		return "saveDiasTurnos";
 

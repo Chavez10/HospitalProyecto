@@ -29,6 +29,8 @@ public class NivelEducativoController {
 	public String showSave(@PathVariable("id") Integer id, Model model) {
 		if (id != null && id != 0) {
 			model.addAttribute("nivelEducativo", nivelEducativoServiceAPI.get(id));
+		}else {
+			model.addAttribute("nivelEducativo", new Nivel_Educativo());
 		}
 		return "saveNivelEducativo";
 

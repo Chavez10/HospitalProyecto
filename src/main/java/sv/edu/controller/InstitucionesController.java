@@ -30,6 +30,8 @@ public class InstitucionesController {
 	public String showSave(@PathVariable("id") Integer id, Model model) {
 		if (id != null && id != 0) {
 			model.addAttribute("instituciones", institucionesServiceAPI.get(id));
+		}else {
+			model.addAttribute("instituciones", new Instituciones());
 		}
 		return "saveInstituciones";
 
