@@ -1,21 +1,30 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-<meta charset="ISO-8859-1">
-<title>Listado Roles</title>
-<!-- Bootstrap css -->
-<link href=".../static/css/bootstrap.css" rel="stylesheet"
+<meta charset="UTF-8">
+<title>Administracion de Roles</title>
+<!-- Bootstrap CSS -->
+<link href="../static/css/bootstrap.css" rel="stylesheet"
 	th:href="@{/css/bootstrap.css}">
 </head>
 <body>
 	<div class="container">
-		<form action="#" th:action="@{/save}" class="form-group"
-			th:object=${rol} method="post">
+		<br>
+		<hr>
+		<h2>Nueva Rol</h2>
+		<hr />
+		<form action="#" th:action="@{/saveRoles}" th:object="${auth}"
+			method="post">
+
 			<div class="form-group">
-				<label for="rol">Rol</label> <input type="text" class="form-control"
-					id="rol" name="rol">
+				<label for="id">Codigo</label> <input type="text" th:field="*{id}"
+					name="id" id="id" class="form-control" />
 			</div>
-			<button type="submit" class="btn btn-success">Guardar</button>
+			<div class="form-group">
+				<label for="nombre">Rol</label> <input type="text" id="authority"
+					name="authority" th:field="*{authority}" class="form-control" />
+			</div>
+			<button type="submit" class="btn btn-success">Guardar Rol</button>
 		</form>
 	</div>
 </body>
