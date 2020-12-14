@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Administracion de Usuarios</title>
+<!-- Bootstrap CSS -->
+<link href="../static/css/bootstrap.css" rel="stylesheet"
+	th:href="@{/css/bootstrap.css}">
+</head>
+<body>
+	<div class="container">
+		<br>
+		<hr>
+		<h2>Nuevo Usuario</h2>
+		<hr />
+		<form action="#" th:action="@{/saveUsuario}" th:object="${usuario}"
+			method="post">
+			<div class="form-group">
+				<label for="nombre">Codigo</label><input type="text"
+					th:field="*{id}" name="id" id="id" class="form-control" />
+			</div>
+
+			<div class="form-group">
+				<label for="nombre">Usuario</label> <input type="text" id="username"
+					name="username" th:field="*{username}" class="form-control" />
+			</div>
+			<div class="form-group">
+				<label for="password">Contraseña</label> <input type="text"
+					id="password" name="password" th:field="*{password}"
+					class="form-control" />
+			</div>
+			<div class="form-group">
+				<label for="estado">Estado</label> <input type="text" id="enabled"
+					name="enabled" th:field="*{enabled}" class="form-control" />
+			</div>
+			<button type="submit" class="btn btn-success">Guardar
+				Usuario</button>
+		</form>
+	</div>
+</body>
+</html>

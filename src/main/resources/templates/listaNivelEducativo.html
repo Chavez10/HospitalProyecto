@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Administracion de Niveles Educativos</title>
+<!-- Bootstrap CSS -->
+<link href="../static/css/bootstrap.css" rel="stylesheet"
+	th:href="@{/css/bootstrap.css}">
+</head>
+<body>
+	<div class="container">
+		<hr>
+		<div>
+			<a href="/saveNivelEducativo/0" class="btn btn-primary">Agregar Nivel</a>
+		</div>
+
+		<br>
+		<h3 th:if="${list.isEmpty()}">No hay registros todavía</h3>
+		<div th:if="${!list.isEmpty()}">
+			<h2>Niveles</h2>
+			<hr />
+			<table class="table">
+				<thead>
+					<tr>
+						<th>Niveles Registradas</th>
+						<th></th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="niv : ${list}">
+						<td th:text="${niv.nivel}">
+						<td><a th:href="@{/saveNivelEducativo/{id}(id=${niv.id_nivel})}"
+							class="btn btn-info">Actualizar</a></td>
+						<td><a th:href="@{/deleteNivelEducativo/{id}(id=${niv.id_nivel})}"
+							class="btn btn-warning">Eliminar</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</body>
+</html>

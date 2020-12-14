@@ -15,12 +15,12 @@ public class Nivel_Educativo {
 	@Column
 	private String nivel;
 
-	public int getId_nivel() {
+	public Integer getId_nivel() {
 		return id_nivel;
 	}
 
 	
-	public void setId_nivel(int id_nivel) {
+	public void setId_nivel(Integer id_nivel) {
 		this.id_nivel = id_nivel;
 	}
 

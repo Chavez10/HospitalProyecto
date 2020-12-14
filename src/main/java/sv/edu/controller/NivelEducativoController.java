@@ -40,7 +40,7 @@ public class NivelEducativoController {
 	public String save(Nivel_Educativo nivelEducativo, Model model) {
 		nivelEducativoServiceAPI.save(nivelEducativo);
 
-		return "redirect:/listaRoles";
+		return "redirect:/listaNivelEducativo";
 
 	}
 

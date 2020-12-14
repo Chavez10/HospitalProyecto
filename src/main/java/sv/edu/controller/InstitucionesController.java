@@ -49,6 +49,6 @@ public class InstitucionesController {
 	public String delete(@PathVariable Integer id, Model model) {
 		institucionesServiceAPI.delete(id);
 
-		return "redirect:/listainstituciones";
+		return "redirect:/listaInstituciones";
 	}
 }
