@@ -8,8 +8,8 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-<link rel="stylesheet" type="text/css" href="static/css/index2.css"
-	th:href="@{/css/index2.css}">
+<link rel="stylesheet" type="text/css" href="static/css/index1.css"
+	th:href="@{/css/index1.css}">
 
 <head>
 <title>Hello World!</title>
@@ -35,42 +35,34 @@
 
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="#">Mantenimiento</a></li>
+					<li class="active"><a href="#">Principal</a></li>
 					<li class="dropdown"><a class="dropdown-toggle"
-						data-toggle="dropdown" href="#">Modulo de Usuarios <span
+						data-toggle="dropdown" href="#">Cuadro Clinico<span
 							class="caret"></span></a>
 						<ul class="dropdown-menu">
-							<li><a href="#">Usuarios</a></li>
-							<li><a href="#">Roles</a></li>
+							<li><a href="#">Datos del Paciente</a></li>
+							
 						</ul></li>
 					<li class="dropdown"><a class="dropdown-toggle"
-						data-toggle="dropdown" href="#">Modulo de Registro <span
+						data-toggle="dropdown" href="#">Horarios <span
 							class="caret"></span></a>
 						<ul class="dropdown-menu">
-							<li><a href="#">Tipo Documento</a></li>
-							<li><a href="#">Nacionalidades</a></li>
-							<li><a href="#">Perfiles</a></li>
-							<li><a href="#">Especialidades</a></li>
-							<li><a href="#">Instituciones</a></li>
-							<li><a href="#">Nivel Educativo</a></li>
+							<li><a href="#">Mis Turnos</a></li>
+							
 						</ul></li>
-					<li class="dropdown"><a class="dropdown-toggle"
-						data-toggle="dropdown" href="#">Modulo de Horario <span
-							class="caret"></span></a>
-						<ul class="dropdown-menu">
-							<li><a href="#">Turnos</a></li>
-							<li><a href="#">Horarios</a></li>
-
-						</ul></li>
+					
 
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
-				<a th:href="@{/user}">Menu Principal</a><br><br> 
 					<form th:action="@{/logout}" method="post">
 						<li><a href="/login"><span
 								class="glyphicon glyphicon-user"></span> Sign Up</a></li>
 					</form>
 
+					<li><a href="#"><span class="glyphicon glyphicon-log-in"></span>
+							Login</a></li>
+
+                    <a th:href="@{/admin}"> Ir a otro menu</a> 
 				</ul>
 			</div>
 		</div>

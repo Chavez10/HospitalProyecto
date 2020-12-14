@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Administracion de Nacionalidades</title>
+<!-- Bootstrap CSS -->
+<link href="../static/css/bootstrap.css" rel="stylesheet"
+	th:href="@{/css/bootstrap.css}">
+</head>
+<body>
+	<div class="container">
+		<br>
+		<hr>
+		<h2>Nueva Persona</h2>
+		<hr />
+		<form action="#" th:action="@{/saveNacion}" th:object="${nacion}"
+			method="post">
+			<input type="hidden" th:field="*{id_nacionalidad}" name="id_nacionalidad" id="id_nacionalidad" />
+			<div class="form-group">
+				<label for="nombre">Nacionalidad</label> <input type="text" id="nacionalidad"
+					name="nacionalidad" th:field="*{nacionalidad}" class="form-control" />
+			</div>
+			<button type="submit" class="btn btn-success">Guardar Nacionalidad</button>
+		</form>
+	</div>
+</body>
+</html>
