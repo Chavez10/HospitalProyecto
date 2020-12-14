@@ -13,12 +13,12 @@
 		<hr>
 		<h2>Nuevo Documento</h2>
 		<hr />
-		<form action="#" th:action="@{/saveDocumentos}" th:object="${documentos}"
+		<form action="#" th:action="@{/saveDocumentos}" th:object="${documento}"
 			method="post">
 			<input type="hidden" th:field="*{id_tipo_docu}" name="id_tipo_docu" id="id_tipo_docu" />
 			<div class="form-group">
-				<label for="nombre">Documentos</label> <input type="text" id="documentos"
-					name="documentos" th:field="*{documentos}" class="form-control" />
+				<label for="nombre">Documentos</label> <input type="text" id="documento"
+					name="documento" th:field="*{documento}" class="form-control" />
 			</div>
 			<button type="submit" class="btn btn-success">Guardar Documentos</button>
 		</form>
