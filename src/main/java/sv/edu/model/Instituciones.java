@@ -12,12 +12,12 @@ public class Instituciones {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id_institucion;
 @Column
-	public int getId_institucion() {
+	public Integer getId_institucion() {
 		return id_institucion;
 	}
 
 	
-	public void setId_institucion(int id_institucion) {
+	public void setId_institucion(Integer id_institucion) {
 		this.id_institucion = id_institucion;
 	}
 

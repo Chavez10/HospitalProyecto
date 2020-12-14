@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Administracion de Instituciones</title>
+<!-- Bootstrap CSS -->
+<link href="../static/css/bootstrap.css" rel="stylesheet"
+	th:href="@{/css/bootstrap.css}">
+</head>
+<body>
+	<div class="container">
+		<br>
+		<hr>
+		<h2>Nueva Institucion</h2>
+		<hr />
+		<form action="#" th:action="@{/saveInstituciones}" th:object="${instituciones}"
+			method="post">
+			<input type="hidden" th:field="*{id_institucion}" name="id_institucion" id="id_institucion" />
+			<div class="form-group">
+				<label for="nombre">Institucion</label> <input type="text" id="institucion"
+					name="institucion" th:field="*{institucion}" class="form-control" />
+			</div>
+			<button type="submit" class="btn btn-success">Guardar Institucion</button>
+		</form>
+	</div>
+</body>
+</html>
