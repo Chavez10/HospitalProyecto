@@ -25,7 +25,7 @@ public class Registros {
 	@Column
 	private int nacionalidad;
 	@Column
-	private int tipo_dr;
+	private Integer tipo_dr;
 	@Column
 	private String jvpm;
 	
@@ -84,10 +84,11 @@ public class Registros {
 	public void setNacionalidad(int nacionalidad) {
 		this.nacionalidad = nacionalidad;
 	}
-	public int getTipo_dr() {
+	
+	public Integer getTipo_dr() {
 		return tipo_dr;
 	}
-	public void setTipo_dr(int tipo_dr) {
+	public void setTipo_dr(Integer tipo_dr) {
 		this.tipo_dr = tipo_dr;
 	}
 	public String getJvpm() {

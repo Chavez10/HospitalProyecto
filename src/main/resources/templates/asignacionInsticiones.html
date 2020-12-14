@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Asignaciones de Instituciones</title>
+<!-- Bootstrap CSS -->
+<link href="../static/css/bootstrap.css" rel="stylesheet"
+	th:href="@{/css/bootstrap.css}">
+</head>
+<body>
+	<div class="container">
+		<br />
+		<div>
+			<a href="/saveAsignaInstitucion/0" class="btn btn-primary">Agregar</a>
+		</div>
+		<br />
+		<h3 th:if="${list.isEmpty()}">No hay registros todavía</h3>
+		<div th:if="${!list.isEmpty()}">
+			<h2>Instituciones Asignadas</h2>
+			<hr/>
+			<table class="table">
+				<thead>
+					<tr>
+						<th>Usuario</th>
+						<th>Institucion</th>
+						<th>Nivel Educativo</th>
+						<th></th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="inst : ${list}">
+						<td th:text="${inst.id_registro}">
+						<td th:text="${inst.id_institucion}">
+						<td th:text="${inst.id_nivel}">
+						<td><a th:href="@{/saveAsignaInstitucion/{id}(id=${inst.id_asig_institucion})}"
+							class="btn btn-info">Actualizar</a></td>
+						<td><a th:href="@{/deleteAsigInstituto/{id}(id=${inst.id_asig_institucion})}"
+							class="btn btn-warning">Eliminar</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		
+	</div>
+</body>
+</html>

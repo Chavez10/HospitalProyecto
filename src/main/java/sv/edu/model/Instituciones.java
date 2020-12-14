@@ -11,27 +11,23 @@ public class Instituciones {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id_institucion;
-@Column
+	@Column
+	private String institucion;
+
 	public Integer getId_institucion() {
 		return id_institucion;
 	}
 
-	
 	public void setId_institucion(Integer id_institucion) {
 		this.id_institucion = id_institucion;
 	}
 
-	
 	public String getInstitucion() {
 		return institucion;
 	}
 
-	
 	public void setInstitucion(String institucion) {
 		this.institucion = institucion;
 	}
-
-	
-	private String institucion;
 
 }
