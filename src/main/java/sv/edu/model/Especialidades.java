@@ -15,16 +15,17 @@ public class Especialidades {
 	@Column
 	private String especialidad;
 
-	public int getId_especialidad() {
+	
+	public Integer getId_especialidad() {
 		return id_especialidad;
 	}
 
 
-	public void setId_especialidad(int id_especialidad) {
+	public void setId_especialidad(Integer id_especialidad) {
 		this.id_especialidad = id_especialidad;
 	}
 
-	
+
 	public String getEspecialidad() {
 		return especialidad;
 	}
