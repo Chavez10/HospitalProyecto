@@ -7,15 +7,16 @@ public class Perfiles {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY )
-	private Integer idperfil;
+	private Integer id_perfil;
 	@Column
 	private String perfil;
 	
-	public int getIdperfil() {
-		return idperfil;
+	
+	public Integer getId_perfil() {
+		return id_perfil;
 	}
-	public void setIdperfil(int idperfil) {
-		this.idperfil = idperfil;
+	public void setId_perfil(Integer id_perfil) {
+		this.id_perfil = id_perfil;
 	}
 	public String getPerfil() {
 		return perfil;

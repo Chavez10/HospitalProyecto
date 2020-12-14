@@ -7,16 +7,17 @@ public class TiposDocumentos {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer idtipodocu;
+	private Integer id_tipo_docu;
 	@Column
 	private String documento;
 	
 	
-	public int getIdtipodocu() {
-		return idtipodocu;
+	
+	public Integer getId_tipo_docu() {
+		return id_tipo_docu;
 	}
-	public void setIdtipodocu(int idtipodocu) {
-		this.idtipodocu = idtipodocu;
+	public void setId_tipo_docu(Integer id_tipo_docu) {
+		this.id_tipo_docu = id_tipo_docu;
 	}
 	public String getDocumento() {
 		return documento;

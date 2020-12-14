@@ -35,6 +35,19 @@ public class User {
 	@JoinTable(name = "authorities_users", joinColumns = @JoinColumn(name = "usuario_id"), inverseJoinColumns = @JoinColumn(name = "authority_id"))
 	private Set<Authority> authority;
 	
+	
+	
+	public User() {
+	}
+
+	public User(Long id, String username, String password, boolean enabled) {
+		super();
+		this.id = id;
+		this.username = username;
+		this.password = password;
+		this.enabled = enabled;
+	}
+
 	public Long getId() {
 		return id;
 	}
