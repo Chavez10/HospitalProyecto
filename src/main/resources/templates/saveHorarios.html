@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Administracion de Nacionalidades</title>
+<!-- Bootstrap CSS -->
+<link href="../static/css/bootstrap.css" rel="stylesheet"
+	th:href="@{/css/bootstrap.css}">
+</head>
+<body>
+	<div class="container">
+		<br>
+		<hr>
+		<h2>Nueva Horario</h2>
+		<hr />
+		<form action="#" th:action="@{/saveHorarios}" th:object="${horarios}"
+			method="post">
+
+			<div class="form-group">
+				<label for="codigo">Codigo</label><input type="text"
+					th:field="*{id_horario}" name="id_horario" id="id_horario"
+					class="form-control" />
+			</div>
+			<div class="form-group">
+				<label for="nombre">Horario</label> <input type="text" id="horario"
+					name="horario" th:field="*{horario}" class="form-control" />
+			</div>
+			<button type="submit" class="btn btn-success">Guardar
+				Horarios</button>
+		</form>
+	</div>
+</body>
+</html>

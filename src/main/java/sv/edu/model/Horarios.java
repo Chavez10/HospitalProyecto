@@ -10,7 +10,7 @@ import javax.persistence.Id;
 public class Horarios {
 
 	@Id
-	@GeneratedValue(strategy =GenerationType.IDENTITY )
+	@GeneratedValue(strategy =GenerationType.AUTO )
 	private String id_horario;
 	@Column
 	private String horario;

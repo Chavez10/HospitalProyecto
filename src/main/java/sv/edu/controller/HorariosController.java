@@ -26,7 +26,7 @@ public class HorariosController {
 
 	@GetMapping("/saveHorarios/{id}")
 	public String showSave(@PathVariable("id") String id, Model model) {
-		if (id != null && id.equals("0") ) {
+		if (id != null && !id.equals("0") ) {
 			model.addAttribute("horarios", horariosServiceAPI.get(id));
 		}else {
 			model.addAttribute("horarios", new Horarios());

@@ -16,12 +16,12 @@ public class Dias_Turnos {
 	private String dia;
 
 	
-	public int getId_dia() {
+	public Integer getId_dia() {
 		return id_dia;
 	}
 
 
-	public void setId_dia(int id_dia) {
+	public void setId_dia(Integer id_dia) {
 		this.id_dia = id_dia;
 	}
 

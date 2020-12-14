@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Administracion de Turnos</title>
+<!-- Bootstrap CSS -->
+<link href="../static/css/bootstrap.css" rel="stylesheet"
+	th:href="@{/css/bootstrap.css}">
+</head>
+<body>
+	<div class="container">
+		<br>
+		<hr>
+		<h2>Nueva Turno</h2>
+		<hr />
+		<form action="#" th:action="@{/saveDiasTurnos}" th:object="${DiasTurnos}"
+			method="post">
+			<input type="hidden" th:field="*{id_dia}" name="id_dia" id="id_dia" />
+			<div class="form-group">
+				<label for="nombre">Turnos</label> <input type="text" id="dia"
+					name="dia" th:field="*{dia}" class="form-control" />
+			</div>
+			<button type="submit" class="btn btn-success">Guardar Turno</button>
+		</form>
+	</div>
+</body>
+</html>
