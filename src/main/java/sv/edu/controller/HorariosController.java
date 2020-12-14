@@ -24,7 +24,7 @@ public class HorariosController {
 
 	}
 
-	@GetMapping("/save/{id}")
+	@GetMapping("/saveHorarios/{id}")
 	public String showSave(@PathVariable("id") String id, Model model) {
 		if (id != null && id.equals("0") ) {
 			model.addAttribute("horarios", horariosServiceAPI.get(id));
@@ -33,7 +33,7 @@ public class HorariosController {
 
 	}
 
-	@PostMapping("/save")
+	@PostMapping("/saveHorarios")
 	public String save(Horarios horarios, Model model) {
 		horariosServiceAPI.save(horarios);
 
@@ -41,7 +41,7 @@ public class HorariosController {
 
 	}
 
-	@GetMapping("/delete/{id}")
+	@GetMapping("/deleteHorarios/{id}")
 	public String delete(@PathVariable String id, Model model) {
 		horariosServiceAPI.delete(id);
 

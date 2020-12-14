@@ -24,7 +24,7 @@ public class EspecialidadesController {
 	}
 	
 
-	@GetMapping("/save/{id}")
+	@GetMapping("/saveEspecialidades/{id}")
 	public String showSave(@PathVariable("id") Integer id, Model model) {
 		if (id != null && id != 0) {
 			model.addAttribute("especialidades", especialidadServiceAPI.get(id));
@@ -34,7 +34,7 @@ public class EspecialidadesController {
 	}
 
 
-	@PostMapping("/save")
+	@PostMapping("/saveEspecialidades")
 	public String save(Especialidades especialidades, Model model) {
 		especialidadServiceAPI.save(especialidades);
 
@@ -42,7 +42,7 @@ public class EspecialidadesController {
 
 	}
 
-	@GetMapping("/delete/{id}")
+	@GetMapping("/deleteEspecialidades/{id}")
 	public String delete(@PathVariable Integer id, Model model) {
 		especialidadServiceAPI.delete(id);
 

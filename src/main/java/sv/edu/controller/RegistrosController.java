@@ -40,7 +40,7 @@ public class RegistrosController {
 		return "redirect:/registros";
 	}
 	
-	@GetMapping("/delete/{id}")
+	@GetMapping("/deleteRegistro/{id}")
 	public String delete(@PathVariable String id) {
 		regAPI.delete(id);
 		return "redirect:/registros";

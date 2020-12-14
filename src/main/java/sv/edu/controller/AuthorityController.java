@@ -33,13 +33,13 @@ public class AuthorityController {
 		return "saveRoles";
 	}
 	
-	@PostMapping("/savaeRoles")
+	@PostMapping("/saveRoles")
 	public String sava(Authority au) {
 		authAPI.save(au);
 		return "redirect:/roles";
 	}
 	
-	@GetMapping("/delete/{id}")
+	@GetMapping("/deleteRoles/{id}")
 	public String delete(@PathVariable Long id) {
 		authAPI.delete(id);
 		return "redirect:/roles";

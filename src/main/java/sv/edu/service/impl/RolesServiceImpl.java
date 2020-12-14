@@ -17,6 +17,7 @@ public class RolesServiceImpl extends GenericServiceImpl<Roles, Integer> impleme
 	
 	@Autowired
 	private RolesDaoAPI rolesDaoAPI;
+	
 	@Override
 	public CrudRepository<Roles, Integer> getDao() {
 		return rolesDaoAPI;

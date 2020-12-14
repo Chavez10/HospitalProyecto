@@ -26,7 +26,7 @@ public class InstitucionesController {
 
 	}
 
-	@GetMapping("/save/{id}")
+	@GetMapping("/saveInstituciones/{id}")
 	public String showSave(@PathVariable("id") Integer id, Model model) {
 		if (id != null && id != 0) {
 			model.addAttribute("instituciones", institucionesServiceAPI.get(id));
@@ -35,7 +35,7 @@ public class InstitucionesController {
 
 	}
 
-	@PostMapping("/save")
+	@PostMapping("/saveInstituciones")
 	public String save(Instituciones instituciones, Model model) {
 		institucionesServiceAPI.save(instituciones);
 
@@ -43,7 +43,7 @@ public class InstitucionesController {
 
 	}
 
-	@GetMapping("/delete/{id}")
+	@GetMapping("/deleteInstituciones/{id}")
 	public String delete(@PathVariable Integer id, Model model) {
 		institucionesServiceAPI.delete(id);
 

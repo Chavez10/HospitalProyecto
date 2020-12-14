@@ -12,13 +12,14 @@ import sv.edu.model.Roles;
 import sv.edu.services.api.HorariosServiceAPI;
 
 @Service
-public class HorariosServiceImpl extends GenericServiceImpl <Horarios, String> implements HorariosServiceAPI {
-@Autowired 
-private HorariosDaoAPI horariosDaoAPI;
-@Override
-public CrudRepository<Horarios, String> getDao() {
-	return horariosDaoAPI;
-	
-}
-	
+public class HorariosServiceImpl extends GenericServiceImpl<Horarios, String> implements HorariosServiceAPI {
+	@Autowired
+	private HorariosDaoAPI horariosDaoAPI;
+
+	@Override
+	public CrudRepository<Horarios, String> getDao() {
+		return horariosDaoAPI;
+
+	}
+
 }

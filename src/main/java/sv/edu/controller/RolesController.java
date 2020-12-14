@@ -24,16 +24,16 @@ public class RolesController {
 
 	}
 
-	@GetMapping("/save/{id}")
+	@GetMapping("/saveAutoridad/{id}")
 	public String showSave(@PathVariable("id") Integer id, Model model) {
 		if (id != null && id != 0) {
 			model.addAttribute("rol", rolesServiceAPI.get(id));
 		}
-		return "saveRoles";
+		return "saveAutoridad";
 
 	}
 
-	@PostMapping("/save")
+	@PostMapping("/saveAutoridad")
 	public String save(Roles rol, Model model) {
 		rolesServiceAPI.save(rol);
 
@@ -41,7 +41,7 @@ public class RolesController {
 
 	}
 
-	@GetMapping("/delete/{id}")
+	@GetMapping("/deleteAutoridad/{id}")
 	public String delete(@PathVariable Integer id, Model model) {
 		rolesServiceAPI.delete(id);
 

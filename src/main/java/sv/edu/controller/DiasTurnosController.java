@@ -24,7 +24,7 @@ public class DiasTurnosController {
 
 	}
 
-	@GetMapping("/save/{id}")
+	@GetMapping("/saveDiasTurnos/{id}")
 	public String showSave(@PathVariable("id") Integer id, Model model) {
 		if (id != null && id != 0) {
 			model.addAttribute("DiasTurnos", diasTurnosServiceAPI.get(id));
@@ -33,7 +33,7 @@ public class DiasTurnosController {
 
 	}
 
-	@PostMapping("/save")
+	@PostMapping("/saveDiasTurnos")
 	public String save(Dias_Turnos diasTurnos, Model model) {
 		diasTurnosServiceAPI.save(diasTurnos);
 
@@ -41,7 +41,7 @@ public class DiasTurnosController {
 
 	}
 
-	@GetMapping("/delete/{id}")
+	@GetMapping("/deleteDiasTurnos/{id}")
 	public String delete(@PathVariable Integer id, Model model) {
 		diasTurnosServiceAPI.delete(id);
 

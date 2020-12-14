@@ -25,7 +25,7 @@ public class NivelEducativoController {
 
 	}
 
-	@GetMapping("/save/{id}")
+	@GetMapping("/saveNivelEducativo/{id}")
 	public String showSave(@PathVariable("id") Integer id, Model model) {
 		if (id != null && id != 0) {
 			model.addAttribute("nivelEducativo", nivelEducativoServiceAPI.get(id));
@@ -34,7 +34,7 @@ public class NivelEducativoController {
 
 	}
 
-	@PostMapping("/save")
+	@PostMapping("/saveNivelEducativo")
 	public String save(Nivel_Educativo nivelEducativo, Model model) {
 		nivelEducativoServiceAPI.save(nivelEducativo);
 
@@ -42,7 +42,7 @@ public class NivelEducativoController {
 
 	}
 
-	@GetMapping("/delete/{id}")
+	@GetMapping("/deleteNivelEducativo/{id}")
 	public String delete(@PathVariable Integer id, Model model) {
 		nivelEducativoServiceAPI.delete(id);
 
