@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Listado Roles</title>
+<!-- Bootstrap css -->
+<link href=".../static/css/bootstrap.css" rel="stylesheet"
+	th:href="@{/css/bootstrap.css}">
+</head>
+<body>
+	<div class="container">
+	
+		<br>
+		<div>
+			<a href="/save/0" class="btn btn-primary">Agregar</a>
+		</div>
+	
+		
+			<h2 th:if="${list.isEmpty()}">No hay roles</h2>
+			<div th:if="${!list.isEmpty()}">
+				<h2>Roles</h2>
+				<table class="table">
+					<thead>
+						<tr>
+							<th>Rol</th>
+							<th></th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr th:each="r : ${list}">
+							<td th:text="${r.rol}">
+							<td><a class="btn btn-info" th:href="@{/save/{id}(id=${r.id_rol})}">Editar</a></td>
+							<td><a class="btn btn-warning" th:href="@{/delete/{id}(id=${r.id_rol})}">Eliminar</a></td>
+
+						</tr>
+					</tbody>
+				</table>
+			</div>
+	
+	</div>
+</body>
+</html>

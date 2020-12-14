@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Listado Roles</title>
+<!-- Bootstrap css -->
+<link href=".../static/css/bootstrap.css" rel="stylesheet"
+	th:href="@{/css/bootstrap.css}">
+</head>
+<body>
+	<div class="container">
+		<form action="#" th:action="@{/save}" class="form-group"
+			th:object=${rol} method="post">
+			<div class="form-group">
+				<label for="rol">Rol</label> <input type="text" class="form-control"
+					id="rol" name="rol">
+			</div>
+			<button type="submit" class="btn btn-success">Guardar</button>
+		</form>
+	</div>
+</body>
+</html>

@@ -13,7 +13,7 @@ import sv.edu.dao.api.RolesDaoAPI;
 import sv.edu.model.Roles;
 
 @Service
-public class RolesServiceImp extends GenericServiceImpl<Roles, Integer> implements RolesServiceAPI {
+public class RolesServiceImpl extends GenericServiceImpl<Roles, Integer> implements RolesServiceAPI {
 	
 	@Autowired
 	private RolesDaoAPI rolesDaoAPI;

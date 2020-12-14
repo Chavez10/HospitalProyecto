@@ -11,16 +11,17 @@ public class Roles {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer idrol;
+	private Integer id_rol;
 	@Column
 	private String rol;
 	
 	
-	public int getIdrol() {
-		return idrol;
+	
+	public Integer getId_rol() {
+		return id_rol;
 	}
-	public void setIdrol(int idrol) {
-		this.idrol = idrol;
+	public void setId_rol(Integer id_rol) {
+		this.id_rol = id_rol;
 	}
 	public String getRol() {
 		return rol;
