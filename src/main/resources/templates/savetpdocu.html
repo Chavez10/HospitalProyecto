@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Administracion de Documentos</title>
+<!-- Bootstrap CSS -->
+<link href="../static/css/bootstrap.css" rel="stylesheet"
+	th:href="@{/css/bootstrap.css}">
+</head>
+<body>
+	<div class="container">
+		<br>
+		<hr>
+		<h2>Nuevo Documento</h2>
+		<hr />
+		<form action="#" th:action="@{/saveDocumentos}" th:object="${documentos}"
+			method="post">
+			<input type="hidden" th:field="*{id_tipo_docu}" name="id_tipo_docu" id="id_tipo_docu" />
+			<div class="form-group">
+				<label for="nombre">Documentos</label> <input type="text" id="documentos"
+					name="documentos" th:field="*{documentos}" class="form-control" />
+			</div>
+			<button type="submit" class="btn btn-success">Guardar Documentos</button>
+		</form>
+	</div>
+</body>
+</html>
