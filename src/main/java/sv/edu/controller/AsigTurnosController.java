@@ -34,6 +34,12 @@ public class AsigTurnosController {
 		return "asignaTurnos";
 	}
 	
+	@GetMapping("/misTurnos")
+	public String misTurnos(Model m) {
+		m.addAttribute("list", asigTurnos.getAll());
+		return "misTurnos";
+	}
+	
 	@GetMapping("/saveAsignaTurno/{id}")
 	public String showSave(@PathVariable("id") Integer id, Model m) {
 		if (id != null && id != 0) {
