@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import sv.edu.model.Registros;
+import sv.edu.services.api.NacionalidadesServiceAPI;
 import sv.edu.services.api.RegistrosServiceAPI;
 
 
@@ -17,6 +18,8 @@ public class RegistrosController {
 	
 	@Autowired
 	private RegistrosServiceAPI regAPI;
+	@Autowired
+	private NacionalidadesServiceAPI nacionAPI;
 	
 	@RequestMapping("/registros")
 	public String registros(Model m) {
@@ -26,10 +29,12 @@ public class RegistrosController {
 	
 	@GetMapping("/saveRegistro/{id}")
 	public String showSave(@PathVariable("id") String id, Model m) {
-		if(id != null && id.equals("0")) {
+		if(id != null && !id.equals("0")) {
 			m.addAttribute("registro", regAPI.get(id));
+			m.addAttribute("nac", nacionAPI.getAll());
 		}else {
 			m.addAttribute("registro", new Registros());
+			m.addAttribute("nac", nacionAPI.getAll());
 		}
 		return "saveRegistro";
 	}

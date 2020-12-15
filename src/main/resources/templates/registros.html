@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Registro de Empleados</title>
+<!-- Bootstrap CSS -->
+<link href="../static/css/bootstrap.css" rel="stylesheet"
+	th:href="@{/css/bootstrap.css}">
+</head>
+<body>
+	<div class="container">
+		<hr>
+		<div>
+			<a href="/saveRegistro/0" class="btn btn-primary">Agregar
+				Empleado</a>
+		</div>
+
+		<br>
+		<h3 th:if="${list.isEmpty()}">No hay registros todavía</h3>
+		<div th:if="${!list.isEmpty()}">
+			<h2>Empleados Registrados</h2>
+			<hr />
+			<table class="table">
+				<thead>
+					<tr>
+						<th>Nombre</th>
+						<th>Apellido</th>
+						<th>Genero</th>
+						<th>Edad</th>
+						<th>Direccion</th>
+						<th>Telefono</th>
+						<th>Correo Electronico</th>
+						<th>Nacionalidad</th>
+						<th>Tipo de Doctor</th>
+						<th>JVPM</th>
+						<th></th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="reg : ${list}">
+						<td th:text="${reg.nombre}">
+						<td th:text="${reg.apellido}">
+						<td th:text="${reg.genero}">
+						<td th:text="${reg.edad}">
+						<td th:text="${reg.direccion}">
+						<td th:text="${reg.telefono}">
+						<td th:text="${reg.email}">
+						<td th:text="${reg.nacionalidad}">
+						<td th:text="${reg.tipo_dr}">
+						<td th:text="${reg.jvpm}">
+						<td><a
+							th:href="@{/saveRegistro/{id}(id=${reg.id_registro})}"
+							class="btn btn-info">Actualizar</a></td>
+						<td><a
+							th:href="@{/deleteRegistro/{id}(id=${reg.id_registro})}"
+							class="btn btn-warning">Eliminar</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</body>
+</html>

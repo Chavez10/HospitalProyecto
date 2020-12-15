@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Registro de Empleados</title>
+<!-- Bootstrap CSS -->
+<link href="../static/css/bootstrap.css" rel="stylesheet"
+	th:href="@{/css/bootstrap.css}">
+</head>
+<body>
+	<div class="container">
+		<br>
+		<hr>
+		<h2>Nueva Empleado</h2>
+		<hr />
+		<div class="col-md-12">
+			<form action="#" th:action="@{/saveRegistro}" th:object="${registro}"
+				method="post">
+				<input type="hidden" th:field="*{id_registro}" name="id_registro"
+					id="id_registro" />
+				<div class="col-md-6">
+					<div class="form-group">
+						<label for="nombre">Nombre</label> <input type="text"
+							th:field="*{nombre}" name="nombre" id="nombre"
+							class="form-control" />
+					</div>
+					<div class="form-group">
+						<label for="apellido">Apellido</label> <input type="text"
+							th:field="*{apellido}" name="apellido" id="apellido"
+							class="form-control" />
+					</div>
+					<div class="form-group">
+						<label for="genero">Genero</label> <input type="text"
+							th:field="*{genero}" name="genero" id="genero"
+							class="form-control" />
+					</div>
+					<div class="form-group">
+						<label for="edad">Edad</label> <input type="text"
+							th:field="*{edad}" name="edad" id="edad" class="form-control" />
+					</div>
+					<div class="form-group">
+						<label for="direccion">Direccion</label> <input type="text"
+							th:field="*{direccion}" name="direccion" id="direccion"
+							class="form-control" />
+					</div>
+					<div class="form-group">
+						<label for="telefono">Telefono</label> <input type="text"
+							th:field="*{telefono}" name="telefono" id="telefono"
+							class="form-control" />
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<label for="email">Correo Electronico</label> <input type="text"
+							th:field="*{email}" name="email" id="email" class="form-control" />
+					</div>
+					<div class="form-group">
+						<label for="nacionalidad">Nacionalidad</label> <select
+							th:field="*{nacionalidad}" class="form-control" id="nacionalidad">
+							<option th:each="nacion : ${nac}"
+								th:value="${nacion.id_nacionalidad}"
+								th:text="${nacion.nacionalidad}" />
+						</select>
+					</div>
+					<div class="form-group">
+						<label for="tipo_dr">Tipo Contrato para Doctores</label> <select
+							th:field="*{tipo_dr}" class="form-control" id="tipo_dr">
+							<option value="" selected>Seleccione un tipo de contrato</option>
+							<option value="1">Contrato por Hora</option>
+							<option value="2">Contrato por Tiempo Completo</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label for="jvpm">JVPM</label> <input type="text"
+							th:field="*{jvpm}" name="jvpm" id="jvpm" class="form-control" />
+					</div>
+				</div>
+				<button type="submit" class="btn btn-success">Registrar
+					Empleados</button>
+			</form>
+		</div>
+
+
+	</div>
+</body>
+</html>
