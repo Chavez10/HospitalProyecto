@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Mis Turnos</title>
+<!-- Bootstrap CSS -->
+<link href="../static/css/bootstrap.css" rel="stylesheet"
+	th:href="@{/css/bootstrap.css}">
+</head>
+<body>
+
+	<div class="container">
+		<br />
+		<div>
+			<button class="btn btn-success  float-right" >
+				<a th:href="@{/user}" style="color:#FFFFFF">Regresar al menu</a>
+			</button>
+		</div>
+		<br />
+		<h3 th:if="${list.isEmpty()}">No hay registros todavía</h3>
+		
+		<div th:if="${!list.isEmpty()}">
+			<h2>Mis Turnos</h2>
+			<hr/>
+			<table class="table">
+				<thead>
+					<tr>
+						<th>Codigo de Horario</th>
+						<th>Dia</th>
+						<th>Mes y Año</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="persona : ${list}">
+						<td th:text="${persona.id_horario}">
+						<td th:text="${persona.id_dia}">
+						<td th:text="${persona.mes_anio}">
+						
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+</body>
+</html>
