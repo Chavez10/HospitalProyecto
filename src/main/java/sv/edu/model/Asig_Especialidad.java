@@ -11,21 +11,21 @@ public class Asig_Especialidad {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private String id_asig_especialidad;
+	private Integer id_asig_especialidad;
 	@Column
-	private Integer id_registro;
+	private String id_registro;
 	@Column
 	private String id_especialidad;
-	public String getId_asig_especialidad() {
+	public Integer getId_asig_especialidad() {
 		return id_asig_especialidad;
 	}
-	public void setId_asig_especialidad(String id_asig_especialidad) {
+	public void setId_asig_especialidad(Integer id_asig_especialidad) {
 		this.id_asig_especialidad = id_asig_especialidad;
 	}
-	public Integer getId_registro() {
+	public String getId_registro() {
 		return id_registro;
 	}
-	public void setId_registro(Integer id_registro) {
+	public void setId_registro(String id_registro) {
 		this.id_registro = id_registro;
 	}
 	public String getId_especialidad() {

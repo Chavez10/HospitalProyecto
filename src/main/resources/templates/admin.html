@@ -12,7 +12,7 @@
 	th:href="@{/css/index2.css}">
 
 <head>
-<title>Hello World!</title>
+<title>Menu Administrador</title>
 </head>
 <body>
 	<nav class="navbar navbar-inverse">
@@ -44,7 +44,7 @@
 							<li><a th:href="@{/roles}">Roles</a></li>
 						</ul></li>
 					<li class="dropdown"><a class="dropdown-toggle"
-						data-toggle="dropdown" href="#">Modulo de Registro <span
+						data-toggle="dropdown" href="#">Modulo de Mantenimiento <span
 							class="caret"></span></a>
 						<ul class="dropdown-menu">
 							<li><a th:href="@{/documentos}">Tipo Documento</a></li>
@@ -62,10 +62,29 @@
 							<li><a th:href="@{/listaHorarios}">Horarios</a></li>
 
 						</ul></li>
+					<li class="dropdown"><a class="dropdown-toggle"
+						data-toggle="dropdown" href="#">Modulo de Asignaciones <span
+							class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a th:href="@{/Asig_Documentos}">Asignacion de
+									Documentos</a></li>
+							<li><a th:href="@{/listaAsig_Especialidades}">Asignacion de
+									Especialidades</a></li>
+							<li><a th:href="@{/asignacionInsticiones}">Asignacion de
+									Instituciones</a></li>
+							<li><a th:href="@{/asignacionPerfiles}">Asignacion de
+									Perfiles</a></li>
+							<li><a th:href="@{/asignaTurnos}">Asignacion de Turnos
+									Laborales</a></li>
+
+
+						</ul></li>
 
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
-				<a th:href="@{/user}">Menu Principal</a><br><br> 
+					<a th:href="@{/user}">Menu Principal</a>
+					<br>
+					<br>
 					<form th:action="@{/logout}" method="post">
 						<li><a href="/login"><span
 								class="glyphicon glyphicon-user"></span> Sign Up</a></li>

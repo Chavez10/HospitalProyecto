@@ -1,48 +1,53 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html>
 <head>
 <meta charset="UTF-8">
-<title>Administracion de Horarios</title>
+<title>Asignaciones de Documentos</title>
 <!-- Bootstrap CSS -->
 <link href="../static/css/bootstrap.css" rel="stylesheet"
 	th:href="@{/css/bootstrap.css}">
 </head>
 <body>
 	<div class="container">
-		<hr>
+		<br />
 		<div>
-			<a href="/saveHorarios/0" class="btn btn-primary">Agregar Horario</a>
+			<a href="/saveAsig_Documentos/0" class="btn btn-primary">Agregar</a>
 			<button class="btn btn-success  float-right" >
 				<a th:href="@{/admin}" style="color:#FFFFFF">Regresar al menu</a>
 			</button>
 		</div>
-
-		<br>
+		<br />
 		<h3 th:if="${list.isEmpty()}">No hay registros todavía</h3>
 		<div th:if="${!list.isEmpty()}">
-			<h2>Horarios</h2>
+			<h2>Documentos Asignadas</h2>
 			<hr />
 			<table class="table">
 				<thead>
 					<tr>
-						<th>Codigo de horarios</th>
-						<th>Horarios Registrados</th>
+						<th>Usuario</th>
+						<th>Documentos</th>
+                        <th>Numero de Documento</th>
 						<th></th>
 						<th></th>
 					</tr>
 				</thead>
 				<tbody>
-					<tr th:each="hor : ${list}">
-						<td th:text="${hor.id_horario}">
-						<td th:text="${hor.horario}">
-						<td><a th:href="@{/saveHorarios/{id}(id=${hor.id_horario})}"
+					<tr th:each="doc : ${list}">
+						<td th:text="${doc.id_registro}">
+						<td th:text="${doc.tipo_docu}">
+						<td th:text="${doc.numero_docu}">
+						
+						<td><a
+							th:href="@{/saveAsig_Documentos/{id}(id=${doc.id_asig_docu})}"
 							class="btn btn-info">Actualizar</a></td>
-						<td><a th:href="@{/deleteHorarios/{id}(id=${hor.id_horario})}"
+						<td><a
+							th:href="@{/deleteAsig_Documentos/{id}(id=${doc.id_asig_docu})}"
 							class="btn btn-warning">Eliminar</a></td>
 					</tr>
 				</tbody>
 			</table>
 		</div>
+
 	</div>
 </body>
 </html>

@@ -52,7 +52,7 @@ public class Asig_EspecialidadController {
 
 	}
 
-	@GetMapping("/deleteEspecialidades/{id}")
+	@GetMapping("/deleteAsigEspecialidades/{id}")
 	public String delete(@PathVariable Integer id, Model model) {
 		asig_EspecialidadedesServceAPI.delete(id);
 

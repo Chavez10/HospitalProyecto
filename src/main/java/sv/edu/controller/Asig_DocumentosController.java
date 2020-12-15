@@ -29,11 +29,11 @@ public class Asig_DocumentosController {
 	@RequestMapping("/Asig_Documentos")
 	public String asig_Documentos(Model model) {
 		model.addAttribute("list", asig_DocumentosAPI.getAll());
-		return "asig_Documentos";
+		return "Asig_Documentos";
 	}
 	
 
-	@GetMapping("/saveAsig_Documentosd/{id}")
+	@GetMapping("/saveAsig_Documentos/{id}")
 	public String showSave(@PathVariable("id") Integer id, Model model) {
 		if (id != null && id != 0) {
 			model.addAttribute("asig_Documentos", asig_DocumentosAPI.get(id));
@@ -45,10 +45,10 @@ public class Asig_DocumentosController {
 			model.addAttribute("docu", docuAPI.getAll());
 		}
 		
-		return "saveAutoridad";
+		return "saveAsig_Documentos";
 	}
 	
-	@PostMapping("/savaAsig_Documentos")
+	@PostMapping("/saveAsig_Documentos")
 	public String save(Asig_Documentos asig_Documentos , Model model) {
 		asig_DocumentosAPI.save(asig_Documentos);
 		return "redirect:/Asig_Documentos";

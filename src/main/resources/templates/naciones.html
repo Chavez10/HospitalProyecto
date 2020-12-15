@@ -12,7 +12,13 @@
 		<hr>
 		<div>
 			<a href="/saveNacion/0" class="btn btn-primary">Agregar Nacion</a>
+			<button class="btn btn-success  float-right" >
+				<a th:href="@{/admin}" style="color:#FFFFFF">Regresar al menu</a>
+			</button>
 		</div>
+
+
+
 
 		<br>
 		<h3 th:if="${list.isEmpty()}">No hay registros todavía</h3>
@@ -30,9 +36,11 @@
 				<tbody>
 					<tr th:each="nac : ${list}">
 						<td th:text="${nac.nacionalidad}">
-						<td><a th:href="@{/saveNacion/{id}(id=${nac.id_nacionalidad})}"
+						<td><a
+							th:href="@{/saveNacion/{id}(id=${nac.id_nacionalidad})}"
 							class="btn btn-info">Actualizar</a></td>
-						<td><a th:href="@{/deleteNacion/{id}(id=${nac.id_nacionalidad})}"
+						<td><a
+							th:href="@{/deleteNacion/{id}(id=${nac.id_nacionalidad})}"
 							class="btn btn-warning">Eliminar</a></td>
 					</tr>
 				</tbody>

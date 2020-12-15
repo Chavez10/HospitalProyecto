@@ -12,6 +12,9 @@
 		<br />
 		<div>
 			<a href="/saveAsignaTurno/0" class="btn btn-primary">Agregar</a>
+			<button class="btn btn-success  float-right" >
+				<a th:href="@{/admin}" style="color:#FFFFFF">Regresar al menu</a>
+			</button>
 		</div>
 		<br />
 		<h3 th:if="${list.isEmpty()}">No hay registros todavía</h3>

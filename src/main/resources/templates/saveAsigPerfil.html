@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Asignaciones de Perfiles</title>
+<!-- Bootstrap CSS -->
+<link href="../static/css/bootstrap.css" rel="stylesheet"
+	th:href="@{/css/bootstrap.css}">
+</head>
+<body>
+	<div class="container">
+		<br>
+		<hr>
+		<h2>Nueva Perfil</h2>
+		<hr />
+		<form action="#" th:action="@{/saveAsigPerfil}"
+			th:object="${asigPerfil}" method="post">
+			<input type="hidden" th:field="*{id_asig_perfil}"
+				name="id_asig_perfil" id="id_asig_perfil" />
+
+			<div class="form-group">
+				<label for="id_registro">Usuario</label> <select
+					th:field="*{id_registro}" class="form-control" id="id_registro">
+					<option th:each="us : ${reg}" th:value="${us.id_registro}"
+						th:text="${us.nombre}" />
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="id_perfil">Perfil</label> <select
+					th:field="*{id_perfil}" class="form-control" id="id_dia">
+					<option th:each="p : ${perf}" th:value="${p.id_perfil}"
+						th:text="${p.perfil}" />
+				</select>
+			</div>
+
+
+			<button type="submit" class="btn btn-success">Asignar Perfil</button>
+		</form>
+
+	</div>
+
+</body>
+</html>
